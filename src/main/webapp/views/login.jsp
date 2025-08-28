@@ -11,7 +11,7 @@
 	href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-	<div class="login-box">
+	<div class="login-container">
 		<h2>Đăng Nhập Vào Hệ Thống</h2>
 		<c:if test="${not empty alert}">
 			<div style="color: red; margin-bottom: 10px;">${alert}</div>
@@ -29,7 +29,7 @@
 				<label><input type="checkbox" name="remember"> Nhớ
 					tôi</label> <a href="#">Quên mật khẩu?</a>
 			</div>
-			<button type="submit" class="btn">Đăng nhập</button>
+			<button type="submit" class="btn-login">Đăng nhập</button>
 		</form>
 		<div class="register">
 			Nếu bạn chưa có tài khoản trên hệ thống, thì hãy <a

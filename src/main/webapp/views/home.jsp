@@ -1,29 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Trang chủ</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/views/style.css">
+<meta charset="UTF-8">
+<title>Trang Người Dùng</title>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+	<%@ include file="/views/topbar.jsp"%>
 
-    <jsp:include page="/views/topbar.jsp" />
-
-    <h1>Chào mừng đến với Trang chủ!</h1>
-
-    <c:choose>
-        <c:when test="${sessionScope.account != null}">
-            <p>Xin chào, <b>${sessionScope.account.fullName}</b> 🎉</p>
-        </c:when>
-        <c:otherwise>
-            <p>Bạn chưa đăng nhập. Vui lòng 
-               <a href="${pageContext.request.contextPath }/login">Đăng nhập</a>.
-            </p>
-        </c:otherwise>
-    </c:choose>
-
+	<div class="account-container">
+		<h2>Chào mừng ${sessionScope.account.fullName}!</h2>
+		<p>Bạn đã đăng nhập thành công vào hệ thống.</p>
+		<table class="account-table">
+			<tr>
+				<td class="label">Tên đăng nhập:</td>
+				<td>${sessionScope.account.username}</td>
+			</tr>
+			<tr>
+				<td class="label">Email:</td>
+				<td>${sessionScope.account.email}</td>
+			</tr>
+			<tr>
+				<td class="label">Số điện thoại:</td>
+				<td>${sessionScope.account.phone}</td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>

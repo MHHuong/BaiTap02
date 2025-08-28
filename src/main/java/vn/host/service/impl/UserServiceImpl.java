@@ -11,7 +11,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User login(String username, String password) {
 		User user = this.get(username);
-		if (user != null && password.equals(user.getPassWord())) {
+		if (user != null && password.equals(user.getPassword())) {
 			return user;
 		}
 		return null;

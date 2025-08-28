@@ -22,19 +22,19 @@ public class UserDaoImpl implements UserDao {
 			ps.setString(1, username);
 			rs = ps.executeQuery();
 			while (rs.next()) {
-				User user = new User();
-				user.setId(rs.getInt("id"));
-				user.setEmail(rs.getString("email"));
-				user.setUserName(rs.getString("username"));
-				user.setFullName(rs.getString("fullname"));
-				user.setPassWord(rs.getString("password"));
-				user.setAvatar(rs.getString("avatar"));
-				user.setRoleid(Integer.parseInt(rs.getString("roleid")));
-				user.setPhone(rs.getString("phone"));
-				user.setCreatedDate(rs.getDate("createdDate"));
-				return user;
-			}
-		} catch (Exception e) {
+			    User user = new User();
+			    user.setId(rs.getInt("id"));
+			    user.setEmail(rs.getString("email"));
+			    user.setUsername(rs.getString("username"));  
+			    user.setFullname(rs.getString("fullname"));   
+			    user.setPassword(rs.getString("password"));  
+			    user.setAvatar(rs.getString("avatar"));
+			    user.setRoleid(rs.getInt("roleid"));
+			    user.setPhone(rs.getString("phone"));
+			    user.setCreatedDate(rs.getDate("createdDate"));
+			   
+			    return user;
+			}		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;

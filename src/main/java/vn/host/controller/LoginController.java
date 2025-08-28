@@ -35,7 +35,7 @@ public class LoginController extends HttpServlet {
 				}
 			}
 		}
-		req.getRequestDispatcher("views/login.jsp").forward(req, resp);
+		req.getRequestDispatcher("/views/login.jsp").forward(req, resp);
 	}
 
 	@Override
@@ -72,6 +72,10 @@ public class LoginController extends HttpServlet {
 			req.setAttribute("alert", alertMsg);
 			req.getRequestDispatcher("/views/login.jsp").forward(req, resp);
 		}
+		System.out.println("username=" + username + ", password=" + password);
+		System.out.println("Login result: " + user);
+
+
 	}
 
 	private void saveRemeberMe(HttpServletResponse response, String username) {

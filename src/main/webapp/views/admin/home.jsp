@@ -3,17 +3,15 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Trang Quản Trị</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/style.css">
+  <meta charset="UTF-8">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-    <%@ include file="/views/topbar.jsp" %>
+   <%@ include file="/views/topbar.jsp" %>
 
-	<div class="account-container">
-		<h2>Xin chào, Quản trị viên!</h2>
-		<p>Chào mừng bạn đến trang quản trị hệ thống.</p>
-	</div>
+   <div class="account-container">
+      <h1>Xin chào Quản trị viên!</h1>
+   </div>
 </body>
 </html>

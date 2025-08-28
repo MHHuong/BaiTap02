@@ -9,10 +9,9 @@
 	href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+   <%@ include file="/views/topbar.jsp" %>
 	<div class="account-container">
 		<h2>Xin chào, Quản lý!</h2>
-		<p>Bạn có thể quản lý dữ liệu và người dùng tại đây.</p>
-
 	</div>
 </body>
 </html>

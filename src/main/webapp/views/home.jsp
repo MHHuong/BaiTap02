@@ -9,6 +9,8 @@
 	href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+	<%@ include file="/views/topbar.jsp"%>
+
 	<div class="account-container">
 		<h2>Chào mừng ${sessionScope.account.fullName}!</h2>
 		<p>Bạn đã đăng nhập thành công vào hệ thống.</p>

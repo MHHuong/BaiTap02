@@ -7,7 +7,7 @@ public class User implements Serializable {
     private int id;
     private String email;
     private String username;
-    private String fullname;
+    private String fullName;
     private String password;
     private String avatar;
     private int roleid;
@@ -35,11 +35,11 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getPassword() {
@@ -77,13 +77,13 @@ public class User implements Serializable {
         this.createdDate = createdDate;
     }
 
-    public User(int id, String email, String username, String fullname,
+    public User(int id, String email, String username, String fullName,
                 String password, String avatar, int roleid,
                 String phone, Date createdDate) {
         this.id = id;
         this.email = email;
         this.username = username;
-        this.fullname = fullname;
+        this.fullName = fullName;
         this.password = password;
         this.avatar = avatar;
         this.roleid = roleid;

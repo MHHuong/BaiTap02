@@ -66,7 +66,7 @@ public class LoginController extends HttpServlet {
 			if (isRememberMe) {
 				saveRemeberMe(resp, username);
 			}
-			resp.sendRedirect(req.getContextPath() + "/waiting");
+		    resp.sendRedirect(req.getContextPath() + "/views/home.jsp");
 		} else {
 			alertMsg = "Tài khoản hoặc mật khẩu không đúng";
 			req.setAttribute("alert", alertMsg);

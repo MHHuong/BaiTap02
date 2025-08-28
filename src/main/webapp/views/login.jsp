@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Đăng Nhập Vào Hệ Thống</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 	<div class="login-box">
@@ -31,8 +32,8 @@
 			<button type="submit" class="btn">Đăng nhập</button>
 		</form>
 		<div class="register">
-			Nếu bạn chưa có tài khoản trên hệ thống, thì hãy <a href="#">Đăng
-				ký</a>
+			Nếu bạn chưa có tài khoản trên hệ thống, thì hãy <a
+				href="${pageContext.request.contextPath}/register">Đăng ký</a>
 		</div>
 	</div>
 </body>

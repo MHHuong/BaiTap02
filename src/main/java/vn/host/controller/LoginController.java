@@ -27,11 +27,15 @@ public class LoginController extends HttpServlet {
 		Cookie[] cookies = req.getCookies();
 		if (cookies != null) {
 			for (Cookie cookie : cookies) {
-				if (cookie.getName().equals("username")) {
+				if (cookie.getName().equals(Constant.COOKIE_REMEMBER)) {
 					session = req.getSession(true);
-					session.setAttribute("username", cookie.getValue());
-					resp.sendRedirect(req.getContextPath() + "/waiting");
-					return;
+					UserService service = new UserServiceImpl();
+					User user = service.get(cookie.getValue());
+					if (user != null) {
+						session.setAttribute("account", user);
+						resp.sendRedirect(req.getContextPath() + "/waiting");
+						return;
+					}
 				}
 			}
 		}
@@ -66,7 +70,7 @@ public class LoginController extends HttpServlet {
 			if (isRememberMe) {
 				saveRemeberMe(resp, username);
 			}
-		    resp.sendRedirect(req.getContextPath() + "/views/home.jsp");
+			resp.sendRedirect(req.getContextPath() + "/views/home.jsp");
 		} else {
 			alertMsg = "Tài khoản hoặc mật khẩu không đúng";
 			req.setAttribute("alert", alertMsg);
@@ -74,7 +78,6 @@ public class LoginController extends HttpServlet {
 		}
 		System.out.println("username=" + username + ", password=" + password);
 		System.out.println("Login result: " + user);
-
 
 	}
 

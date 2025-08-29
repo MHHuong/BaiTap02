@@ -76,8 +76,6 @@ public class LoginController extends HttpServlet {
 			req.setAttribute("alert", alertMsg);
 			req.getRequestDispatcher("/views/login.jsp").forward(req, resp);
 		}
-		System.out.println("username=" + username + ", password=" + password);
-		System.out.println("Login result: " + user);
 
 	}
 

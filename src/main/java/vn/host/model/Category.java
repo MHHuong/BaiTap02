@@ -1,0 +1,64 @@
+package vn.host.model;
+
+import java.io.Serializable;
+
+public class Category implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	private int categoryid;
+	private String categoryname;
+	private String images;
+	private int status;
+	private int userid;
+
+	public Category() {
+	}
+
+	public Category(int categoryid, String categoryname, String images, int status, int userid) {
+		this.categoryid = categoryid;
+		this.categoryname = categoryname;
+		this.images = images;
+		this.status = status;
+		this.userid = userid;
+	}
+
+	public int getCategoryid() {
+		return categoryid;
+	}
+
+	public void setCategoryid(int categoryid) {
+		this.categoryid = categoryid;
+	}
+
+	public String getCategoryname() {
+		return categoryname;
+	}
+
+	public void setCategoryname(String categoryname) {
+		this.categoryname = categoryname;
+	}
+
+	public String getImages() {
+		return images;
+	}
+
+	public void setImages(String images) {
+		this.images = images;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+}
